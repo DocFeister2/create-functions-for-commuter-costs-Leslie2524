@@ -24,14 +24,17 @@ double toCommutes(double gasDollars) {
 
 // Converts number of commutes into gas cost
 double toDollars(double numCommutes) {
-  double totalMiles = numCommutes * MILES_PER_COMMUTE;
-  double gallonsNeeded = totalMiles / MILES_PER_GALLON;
-  double totalCost = gallonsNeeded * DOLLARS_PER_GALLON;
+  double totalMiles; 
+  double gallonsNeeded;
+  double totalCost; 
+  totalMiles = numCommutes * MILES_PER_COMMUTE; // The total miles for all the whole commute
+  gallonsNeeded = totalMiles / MILES_PER_GALLON; // The amount of gallons needed for the miles the user inputs.
+  totalCost = gallonsNeeded * DOLLARS_PER_GALLON; //The total amount of cost for gallons to commute.
   return totalCost;
 }
 
 int main() {
-
+// different prices in how much a commute costs
   cout << "$20 will buy you: " << toCommutes(20) << " commutes." << endl;
   cout << "$100.50 will buy you: " << toCommutes(100.50) << " commutes." << endl;
   cout << "$500 will buy you: " << toCommutes(500) << " commutes." << endl;
